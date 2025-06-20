@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>meu site</title>
+</head>
+<body>
+    <h1>tarefa 03</h1>
+    <ul>
+        {%for usuario in usuarios %}
+         <li><strong>nome</strong> {{ usuario.nome }} <strong>matricula:</strong> {{ usuario.matricula}} <strong>idade</strong> {{ usuario.idade }} <strong>cidade:</strong> {{ usuario.cidade }} </li>
+        {% endfor %}
+       
+    </ul>
+</body>
+</html>
