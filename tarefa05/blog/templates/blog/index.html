@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meu Blog</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Meu Blog</a></h1>
+    </header>
+
+    <main>
+        {% for post in posts %}
+            <div>
+                <h2><a href="{% url 'post_detalhe' post.id %}">{{ post.titulo }}</a></h2>
+                <p>Publicado em: {{ post.data_publicacao }}</p>
+            </div>
+        {% endfor %}
+    </main>
+
+    <footer>
+        <p>Desenvolvido joice </p>
+    </footer>
+</body>
+</html>
