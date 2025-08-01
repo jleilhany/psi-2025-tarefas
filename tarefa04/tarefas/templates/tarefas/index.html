@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <h1>Minhas Tarefas</h1>
+    <ul>
+        {% for tarefa in tarefas %}
+            <li>
+                <strong>{{ tarefa.nome }}</strong> - 
+                Prazo: {{ tarefa.prazo }} - 
+                {% if tarefa.status %}
+                    ✅ Concluída
+                {% elif tarefa.prazo < hoje %}
+                    ❗ Atrasada
+                {% else %}
+                    🔜 Pendente
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
